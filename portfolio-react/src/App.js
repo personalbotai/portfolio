@@ -1,13 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    // Determine initial theme
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      setTheme('light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+    }
+  };
+
   return (
-    <div className="relative min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans">
+    <div className="relative min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans transition-colors duration-300">
       
+      {/* Theme Toggle Button */}
+      <div className="absolute top-6 right-6 z-50 sm:top-8 sm:right-8">
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full hover:bg-muted transition-colors border border-transparent hover:border-border text-muted-foreground hover:text-foreground focus:outline-none"
+          aria-label="Toggle Theme"
+        >
+          {theme === 'dark' ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          )}
+        </button>
+      </div>
+
       {/* Background Fade Effect */}
       <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
         <div className="h-full w-full" style={{ maskImage: "linear-gradient(to bottom, black, transparent)", WebkitMaskImage: "linear-gradient(to bottom, black, transparent)"}}>
-          <div className="pointer-events-none w-full h-full bg-neutral-900/20"></div>
+          <div className="pointer-events-none w-full h-full bg-muted"></div>
         </div>
       </div>
       
@@ -30,8 +75,8 @@ function App() {
                 </div>
                 
                 <div className="order-1 md:order-2">
-                  <div className="rounded-full p-[2px] w-24 h-24 md:w-32 md:h-32 border border-border bg-muted/50 flex items-center justify-center overflow-hidden">
-                    <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-muted-foreground">
+                  <div className="rounded-full p-[2px] w-24 h-24 md:w-32 md:h-32 border border-border bg-muted/50 flex items-center justify-center overflow-hidden transition-colors duration-300">
+                    <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-muted-foreground transition-colors duration-300">
                       Y
                     </div>
                   </div>
@@ -66,7 +111,7 @@ function App() {
                 
                 {/* Rakuten */}
                 <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
                     <a href="https://rakuten.co.jp" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
                       Rakuten
@@ -82,7 +127,7 @@ function App() {
                 
                 {/* Bytedance */}
                 <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
                     <a href="https://bytedance.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
                       Bytedance
@@ -98,7 +143,7 @@ function App() {
 
                 {/* Tokopedia */}
                 <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
                     <a href="https://tokopedia.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
                       Tokopedia
@@ -143,11 +188,11 @@ function App() {
               
               <div className="flex flex-col gap-y-4 items-center justify-center mt-6">
                 <div className="flex items-center w-full">
-                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
-                  <div className="border border-border bg-primary z-10 rounded-xl px-4 py-1 mx-2">
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent transition-colors duration-300"></div>
+                  <div className="border border-border bg-primary z-10 rounded-xl px-4 py-1 mx-2 transition-colors duration-300">
                     <span className="text-primary-foreground text-sm font-medium">My Projects</span>
                   </div>
-                  <div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent"></div>
+                  <div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent transition-colors duration-300"></div>
                 </div>
                 
                 <div className="flex flex-col gap-y-3 items-center justify-center text-center">
@@ -161,25 +206,25 @@ function App() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto mt-4">
                 
                 {/* Project Card */}
-                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-200 bg-background">
-                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium">
+                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-300 bg-background">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300">
                     [ FlixUI Demo Image ]
                   </div>
-                  <div className="p-4 flex flex-col gap-2">
+                  <div className="p-4 flex flex-col gap-2 flex-grow">
                     <h3 className="font-semibold tracking-tight mt-1 text-lg">FlixUI - Movie Explorer</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       A production-grade Netflix clone built with React and TMDB API. Features include seamless API integrations, custom local storage watchlist, grid-mode category filtering, and an integrated YouTube trailer full-screen player.
                     </p>
                     <div className="mt-auto pt-4 flex flex-wrap gap-1">
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">React</span>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">React Router</span>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">TMDB API</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">React</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">React Router</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">TMDB API</span>
                     </div>
                     <div className="mt-4 flex gap-2">
-                      <a href="https://personalbotai.github.io/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 py-2 w-full">
+                      <a href="https://personalbotai.github.io/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 py-2 w-full transition-colors duration-300">
                         Website
                       </a>
-                      <a href="https://github.com/personalbotai/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium border border-border bg-background hover:bg-muted text-foreground h-8 px-3 py-2 w-full">
+                      <a href="https://github.com/personalbotai/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium border border-border bg-background hover:bg-muted text-foreground h-8 px-3 py-2 w-full transition-colors duration-300">
                         Source
                       </a>
                     </div>
