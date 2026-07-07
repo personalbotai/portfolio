@@ -1,140 +1,197 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans">
-      {/* Header / Nav */}
-      <nav className="fixed w-full top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-bold text-xl tracking-tight text-white">Y<span className="text-emerald-500">.</span></span>
-          <div className="hidden md:flex space-x-8 text-sm font-medium text-neutral-400">
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
+    <div className="relative min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans">
+      
+      {/* Background Fade Effect */}
+      <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+        <div className="h-full w-full" style={{ maskImage: "linear-gradient(to bottom, black, transparent)", WebkitMaskImage: "linear-gradient(to bottom, black, transparent)"}}>
+          <div className="pointer-events-none w-full h-full bg-neutral-900/20"></div>
         </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section id="about" className="pt-32 pb-20 px-6 max-w-5xl mx-auto flex flex-col justify-center min-h-[80vh]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className="text-emerald-500 font-mono mb-4">Hi, my name is</p>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-            Yehezkiel.
-          </h1>
-          <h2 className="text-4xl md:text-6xl font-bold text-neutral-500 mb-8 tracking-tight">
-            I build things for the web.
-          </h2>
-          <p className="max-w-xl text-neutral-400 text-lg leading-relaxed mb-10">
-            I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.
-          </p>
-          <div className="flex gap-4">
-            <a href="#projects" className="bg-emerald-500 text-neutral-950 px-6 py-3 rounded font-medium hover:bg-emerald-400 transition-colors">
-              Check out my work
-            </a>
-            <a href="https://github.com/personalbotai" target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-neutral-700 px-6 py-3 rounded font-medium hover:bg-neutral-800 transition-colors text-white">
-              GitHub
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-6 bg-neutral-900/50">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <h3 className="text-2xl font-bold text-white">Technical Arsenal</h3>
-            <div className="h-px bg-neutral-800 flex-grow max-w-xs"></div>
-          </div>
+      </div>
+      
+      {/* Main Content Area */}
+      <div className="relative z-10 py-12 pb-24 sm:py-24 px-6">
+        <main className="min-h-screen flex flex-col gap-14 relative max-w-2xl mx-auto">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 hover:border-emerald-500/50 transition-colors">
-              <h4 className="text-lg font-bold text-white mb-2">Frontend</h4>
-              <p className="text-neutral-400 text-sm leading-relaxed">
-                React, Next.js, Vue, TypeScript, Tailwind CSS, Framer Motion, Redux, Zustand.
-              </p>
+          {/* Hero Section */}
+          <section id="hero">
+            <div className="mx-auto w-full max-w-2xl space-y-8">
+              <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
+                
+                <div className="gap-2 flex flex-col order-2 md:order-1">
+                  <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
+                    Hi, I'm Yehezkiel
+                  </h1>
+                  <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl">
+                    Android Engineer & Full Stack Developer. Building native apps, web products, and AI-powered tools.
+                  </p>
+                </div>
+                
+                <div className="order-1 md:order-2">
+                  <div className="rounded-full p-[2px] w-24 h-24 md:w-32 md:h-32 border border-border bg-muted/50 flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-muted-foreground">
+                      Y
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
             </div>
-            <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 hover:border-emerald-500/50 transition-colors">
-              <h4 className="text-lg font-bold text-white mb-2">Backend</h4>
-              <p className="text-neutral-400 text-sm leading-relaxed">
-                Node.js, Express, Go (Golang), Python, PostgreSQL, MongoDB, Redis.
-              </p>
-            </div>
-            <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 hover:border-emerald-500/50 transition-colors">
-              <h4 className="text-lg font-bold text-white mb-2">DevOps & Tools</h4>
-              <p className="text-neutral-400 text-sm leading-relaxed">
-                Git, Docker, AWS, Vercel, GitHub Actions, Linux, Nginx.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Featured Projects */}
-      <section id="projects" className="py-20 px-6 max-w-5xl mx-auto">
-        <div className="flex items-center gap-4 mb-12">
-          <h3 className="text-2xl font-bold text-white">Some Things I've Built</h3>
-          <div className="h-px bg-neutral-800 flex-grow max-w-xs"></div>
-        </div>
-
-        <div className="space-y-20">
-          {/* Project 1 */}
-          <div className="relative grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-            <div className="md:col-span-7 md:col-start-1 row-start-1 relative z-10 p-6 md:p-0 bg-neutral-900/90 md:bg-transparent rounded-lg">
-              <p className="text-emerald-500 font-mono text-sm mb-2">Featured Project</p>
-              <h4 className="text-2xl font-bold text-white mb-6">FlixUI - Movie Explorer</h4>
-              <div className="md:bg-neutral-900 md:p-6 md:rounded-xl md:border border-neutral-800 md:shadow-xl mb-6">
-                <p className="text-neutral-300 text-sm leading-relaxed">
-                  A production-grade Netflix clone built with React and TMDB API. Features include seamless API integrations, custom local storage watchlist, grid-mode category filtering, dynamic skeleton loading shimmers, and an integrated YouTube trailer full-screen player.
+          {/* About Section */}
+          <section id="about">
+            <div className="flex min-h-0 flex-col gap-y-4">
+              <div>
+                <h2 className="text-xl font-bold border-l-2 border-foreground pl-3">About</h2>
+              </div>
+              <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground">
+                <p>
+                  Android engineer with 6+ years of experience, focused on <strong>Jetpack Compose and modern Android</strong>. I also build full-stack apps with Next.js, Ktor, and PostgreSQL. Currently at Rakuten in Japan, working on AI-integrated tooling and native development. Outside of work, I enjoy films, learning to take pictures, and reading.
                 </p>
               </div>
-              <ul className="flex flex-wrap gap-4 font-mono text-xs text-neutral-400 mb-6">
-                <li>React</li>
-                <li>React Router</li>
-                <li>Axios</li>
-                <li>CSS Grid</li>
-              </ul>
-              <div className="flex gap-4">
-                <a href="https://github.com/personalbotai/netflix-clone" target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-emerald-500 transition-colors">
-                  Code
-                </a>
-                <a href="https://personalbotai.github.io/netflix-clone" target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-emerald-500 transition-colors">
-                  Live Preview
-                </a>
+            </div>
+          </section>
+
+          {/* Work Experience Section */}
+          <section id="work">
+            <div className="flex min-h-0 flex-col gap-y-6">
+              <div>
+                <h2 className="text-xl font-bold border-l-2 border-foreground pl-3">Work Experience</h2>
+              </div>
+              
+              <div className="flex flex-col gap-8 w-full border-l border-border ml-2 pl-6 relative">
+                
+                {/* Rakuten */}
+                <div className="relative w-full flex flex-col gap-1">
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="flex items-center justify-between gap-2">
+                    <a href="https://rakuten.co.jp" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
+                      Rakuten
+                    </a>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Oct 2025 – Present</time>
+                  </div>
+                  <p className="text-sm font-medium text-foreground/80">Software Engineer Android</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Japan</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                    Lead on the Booking Native Project — migrating booking transactions from web to native, improving search performance, and refactoring the codebase for future scalability.
+                  </p>
+                </div>
+                
+                {/* Bytedance */}
+                <div className="relative w-full flex flex-col gap-1">
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="flex items-center justify-between gap-2">
+                    <a href="https://bytedance.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
+                      Bytedance
+                    </a>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Dec 2023 – Sep 2025</time>
+                  </div>
+                  <p className="text-sm font-medium text-foreground/80">Software Engineer Android</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Jakarta, Indonesia</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                    Led Lynx.js integration into Tokopedia in collaboration with the TikTok team. Became main PIC for Gecko hybrid pages. Integrated TikTok's Byte.io and BTM tracking systems achieving 99%+ GMV accuracy.
+                  </p>
+                </div>
+
+                {/* Tokopedia */}
+                <div className="relative w-full flex flex-col gap-1">
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5"></div>
+                  <div className="flex items-center justify-between gap-2">
+                    <a href="https://tokopedia.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
+                      Tokopedia
+                    </a>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Mar 2019 – Dec 2023</time>
+                  </div>
+                  <p className="text-sm font-medium text-foreground/80">Android Squad Lead → Sr. Software Engineer</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Jakarta, Indonesia</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                    Developed and owned the Product Detail Page — Tokopedia's most visited page. As Squad Lead, managed a cross-functional team of six and led the Jetpack Compose migration.
+                  </p>
+                </div>
+                
               </div>
             </div>
-            <div className="md:col-span-6 md:col-start-7 row-start-1 opacity-20 md:opacity-100 transition-opacity hover:opacity-100 rounded-xl overflow-hidden border border-neutral-800">
-              <div className="aspect-video bg-neutral-800 flex items-center justify-center text-neutral-600">
-                 [ Project Image ]
+          </section>
+
+          {/* Education Section */}
+          <section id="education">
+            <div className="flex min-h-0 flex-col gap-y-6">
+              <div>
+                <h2 className="text-xl font-bold border-l-2 border-foreground pl-3">Education</h2>
+              </div>
+              
+              <div className="flex flex-col gap-8">
+                <div className="flex items-start gap-x-4 justify-between">
+                  <div className="flex flex-col gap-1 flex-1">
+                    <div className="font-semibold leading-none">Duta Wacana Christian University</div>
+                    <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree of Informatics Engineering (GPA: 3.46)</div>
+                  </div>
+                  <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
+                    2015 - 2019
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-32 px-6 max-w-2xl mx-auto text-center">
-        <p className="text-emerald-500 font-mono mb-4">03. What's Next?</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Get In Touch</h2>
-        <p className="text-neutral-400 text-lg leading-relaxed mb-10">
-          I'm currently looking for new opportunities. Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
-        </p>
-        <a href="mailto:hello@example.com" className="inline-block border border-emerald-500 text-emerald-500 px-8 py-4 rounded font-mono hover:bg-emerald-500/10 transition-colors">
-          Say Hello
-        </a>
-      </section>
+          {/* Projects Section */}
+          <section id="projects">
+            <div className="flex min-h-0 flex-col gap-y-8">
+              
+              <div className="flex flex-col gap-y-4 items-center justify-center mt-6">
+                <div className="flex items-center w-full">
+                  <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                  <div className="border border-border bg-primary z-10 rounded-xl px-4 py-1 mx-2">
+                    <span className="text-primary-foreground text-sm font-medium">My Projects</span>
+                  </div>
+                  <div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent"></div>
+                </div>
+                
+                <div className="flex flex-col gap-y-3 items-center justify-center text-center">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Check out my latest work</h2>
+                  <p className="text-muted-foreground max-w-[600px] md:text-lg">
+                    I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto mt-4">
+                
+                {/* Project Card */}
+                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-200 bg-background">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium">
+                    [ FlixUI Demo Image ]
+                  </div>
+                  <div className="p-4 flex flex-col gap-2">
+                    <h3 className="font-semibold tracking-tight mt-1 text-lg">FlixUI - Movie Explorer</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      A production-grade Netflix clone built with React and TMDB API. Features include seamless API integrations, custom local storage watchlist, grid-mode category filtering, and an integrated YouTube trailer full-screen player.
+                    </p>
+                    <div className="mt-auto pt-4 flex flex-wrap gap-1">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">React</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">React Router</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md">TMDB API</span>
+                    </div>
+                    <div className="mt-4 flex gap-2">
+                      <a href="https://personalbotai.github.io/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 py-2 w-full">
+                        Website
+                      </a>
+                      <a href="https://github.com/personalbotai/netflix-clone" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs font-medium border border-border bg-background hover:bg-muted text-foreground h-8 px-3 py-2 w-full">
+                        Source
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-      {/* Footer */}
-      <footer className="py-6 text-center text-sm font-mono text-neutral-500">
-        <p>Built with React & Tailwind CSS</p>
-        <p className="mt-2">© {new Date().getFullYear()} Yehezkiel</p>
-      </footer>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
     </div>
   );
 }
