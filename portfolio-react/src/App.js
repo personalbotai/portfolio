@@ -67,17 +67,17 @@ function App() {
                 
                 <div className="gap-2 flex flex-col order-2 md:order-1">
                   <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
-                    Hi, I'm Yehezkiel
+                    Hi, I'm Syamsul Bahri
                   </h1>
-                  <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl">
-                    Android Engineer & Full Stack Developer. Building native apps, web products, and AI-powered tools.
+                  <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl font-medium">
+                    Software Engineer • Full Stack Developer
                   </p>
                 </div>
                 
                 <div className="order-1 md:order-2">
                   <div className="rounded-full p-[2px] w-24 h-24 md:w-32 md:h-32 border border-border bg-muted/50 flex items-center justify-center overflow-hidden transition-colors duration-300">
                     <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-4xl font-bold text-muted-foreground transition-colors duration-300">
-                      Y
+                      SB
                     </div>
                   </div>
                 </div>
@@ -93,8 +93,8 @@ function App() {
                 <h2 className="text-xl font-bold border-l-2 border-foreground pl-3">About</h2>
               </div>
               <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground">
-                <p>
-                  Android engineer with 6+ years of experience, focused on <strong>Jetpack Compose and modern Android</strong>. I also build full-stack apps with Next.js, Ktor, and PostgreSQL. Currently at Rakuten in Japan, working on AI-integrated tooling and native development. Outside of work, I enjoy films, learning to take pictures, and reading.
+                <p className="bg-primary/5 p-4 rounded-lg border border-border/50">
+                  I have completed a Bachelor of Computer Science, majoring in Engineering. I have a passion for all things technology and design, from software engineering to UI/UX. Well-organised person, problem solver, independent employee with high attention to detail.
                 </p>
               </div>
             </div>
@@ -109,54 +109,23 @@ function App() {
               
               <div className="flex flex-col gap-8 w-full border-l border-border ml-2 pl-6 relative">
                 
-                {/* Rakuten */}
                 <div className="relative w-full flex flex-col gap-1">
                   <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
-                    <a href="https://rakuten.co.jp" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
-                      Rakuten
-                    </a>
-                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Oct 2025 – Present</time>
+                    <span className="font-semibold leading-none">
+                      Freelance / Independent Developer
+                    </span>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Present</time>
                   </div>
-                  <p className="text-sm font-medium text-foreground/80">Software Engineer Android</p>
-                  <p className="text-xs text-muted-foreground/60 italic">Japan</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                    Lead on the Booking Native Project — migrating booking transactions from web to native, improving search performance, and refactoring the codebase for future scalability.
-                  </p>
-                </div>
-                
-                {/* Bytedance */}
-                <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
-                  <div className="flex items-center justify-between gap-2">
-                    <a href="https://bytedance.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
-                      Bytedance
-                    </a>
-                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Dec 2023 – Sep 2025</time>
-                  </div>
-                  <p className="text-sm font-medium text-foreground/80">Software Engineer Android</p>
-                  <p className="text-xs text-muted-foreground/60 italic">Jakarta, Indonesia</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                    Led Lynx.js integration into Tokopedia in collaboration with the TikTok team. Became main PIC for Gecko hybrid pages. Integrated TikTok's Byte.io and BTM tracking systems achieving 99%+ GMV accuracy.
-                  </p>
+                  <p className="text-sm font-medium text-foreground/80">Full Stack Web Developer</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Indonesia</p>
+                  <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
+                    <li>Build and maintain cooperative relationships with consumers and resellers from various regions in Indonesia.</li>
+                    <li>Analyzed customer trends and provided insights to improve customer experience.</li>
+                    <li>Designed and implemented full-stack solutions using React, Node.js, Express, Sequelize-ORM, PostgreSQL, and GraphQL.</li>
+                  </ul>
                 </div>
 
-                {/* Tokopedia */}
-                <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
-                  <div className="flex items-center justify-between gap-2">
-                    <a href="https://tokopedia.com" target="_blank" rel="noopener noreferrer" className="font-semibold leading-none hover:underline">
-                      Tokopedia
-                    </a>
-                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Mar 2019 – Dec 2023</time>
-                  </div>
-                  <p className="text-sm font-medium text-foreground/80">Android Squad Lead → Sr. Software Engineer</p>
-                  <p className="text-xs text-muted-foreground/60 italic">Jakarta, Indonesia</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                    Developed and owned the Product Detail Page — Tokopedia's most visited page. As Squad Lead, managed a cross-functional team of six and led the Jetpack Compose migration.
-                  </p>
-                </div>
-                
               </div>
             </div>
           </section>
@@ -171,11 +140,15 @@ function App() {
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-x-4 justify-between">
                   <div className="flex flex-col gap-1 flex-1">
-                    <div className="font-semibold leading-none">Duta Wacana Christian University</div>
-                    <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree of Informatics Engineering (GPA: 3.46)</div>
+                    <div className="font-semibold leading-none">Universitas Negeri Makassar</div>
+                    <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree of Computer Science, Engineering</div>
                   </div>
-                  <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
-                    2015 - 2019
+                </div>
+                
+                <div className="flex items-start gap-x-4 justify-between">
+                  <div className="flex flex-col gap-1 flex-1">
+                    <div className="font-semibold leading-none">Hacktiv8 Indonesia</div>
+                    <div className="font-sans text-sm text-muted-foreground">Full Stack Web Development Bootcamp</div>
                   </div>
                 </div>
               </div>
@@ -198,16 +171,74 @@ function App() {
                 <div className="flex flex-col gap-y-3 items-center justify-center text-center">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Check out my latest work</h2>
                   <p className="text-muted-foreground max-w-[600px] md:text-lg">
-                    I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
+                    A selection of projects I've built using modern web technologies.
                   </p>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto mt-4">
                 
-                {/* Project Card */}
+                {/* Project 1 */}
                 <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-300 bg-background">
-                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300 p-6 text-center">
+                    [ CNN Indonesia Portal Clone ]
+                  </div>
+                  <div className="p-4 flex flex-col gap-2 flex-grow">
+                    <h3 className="font-semibold tracking-tight mt-1 text-lg">CNN Clone / News Portal</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      News portal application covering Technology, Economy, Entertainment, and Sports, accessed via website and mobile using CNN Indonesia 3rd Party API.
+                    </p>
+                    <div className="mt-auto pt-4 flex flex-wrap gap-1">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">ReactJS</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">React-Native</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">GraphQL</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">MongoDB</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Docker</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Project 2 */}
+                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-300 bg-background">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300 p-6 text-center">
+                    [ E-commerce Platform ]
+                  </div>
+                  <div className="p-4 flex flex-col gap-2 flex-grow">
+                    <h3 className="font-semibold tracking-tight mt-1 text-lg">Wedding E-commerce</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      E-commerce website specifically designed for wedding necessities with Microservices architecture and integrated payment gateway.
+                    </p>
+                    <div className="mt-auto pt-4 flex flex-wrap gap-1">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Microservices</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">React.Js</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Redis</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Midtrans</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Project 3 */}
+                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-300 bg-background">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300 p-6 text-center">
+                    [ IKEA Web Clone ]
+                  </div>
+                  <div className="p-4 flex flex-col gap-2 flex-grow">
+                    <h3 className="font-semibold tracking-tight mt-1 text-lg">IKEA Web Clone</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      IKEA Web cloning application designed to aid in the understanding of new tech stacks and front-end development workflows.
+                    </p>
+                    <div className="mt-auto pt-4 flex flex-wrap gap-1">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">VueJS</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">NodeJS</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Tailwind CSS</span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-secondary text-secondary-foreground rounded-md transition-colors duration-300">Firebase</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Project 4 - FlixUI */}
+                <div className="flex flex-col border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-border/80 transition-all duration-300 bg-background">
+                  <div className="w-full aspect-video bg-muted border-b border-border flex items-center justify-center text-muted-foreground text-sm font-medium transition-colors duration-300 p-6 text-center">
                     [ FlixUI Demo Image ]
                   </div>
                   <div className="p-4 flex flex-col gap-2 flex-grow">
@@ -231,6 +262,19 @@ function App() {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section id="contact" className="pb-10 pt-20 border-t border-border mt-10">
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <h2 className="text-2xl font-bold">Get In Touch</h2>
+              <p className="text-muted-foreground mb-4">Feel free to reach out for collaborations or just a friendly hello.</p>
+              <div className="flex gap-4">
+                <a href="https://github.com/personalbotai" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors p-2 bg-muted rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
               </div>
             </div>
           </section>
