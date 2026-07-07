@@ -111,7 +111,7 @@ function App() {
                   <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
                     <span className="font-semibold leading-none">
-                      Bank Negara Indonesia (BNI)
+                      PT Bank Negara Indonesia (Persero) Tbk (BNI)
                     </span>
                     <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Present</time>
                   </div>
@@ -153,7 +153,7 @@ function App() {
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-x-4 justify-between">
                   <div className="flex flex-col gap-1 flex-1">
-                    <div className="font-semibold leading-none">Universitas Pelita Harapan (UPH)</div>
+                    <div className="font-semibold leading-none">Universitas Negeri Makassar</div>
                     <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree</div>
                   </div>
                 </div>
