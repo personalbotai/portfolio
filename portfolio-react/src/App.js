@@ -4,7 +4,6 @@ function App() {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Determine initial theme
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
       setTheme(storedTheme);
@@ -111,16 +110,32 @@ function App() {
                   <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
                     <span className="font-semibold leading-none">
-                      Freelance / Independent Developer
+                      Pusat Al Quran Custom
                     </span>
-                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Present</time>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Apr 2021 - Present</time>
                   </div>
-                  <p className="text-sm font-medium text-foreground/80">Full Stack Web Developer</p>
-                  <p className="text-xs text-muted-foreground/60 italic">Indonesia</p>
+                  <p className="text-sm font-medium text-foreground/80">Online Shop Owner</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Tangerang, Indonesia</p>
                   <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
-                    <li>Build and maintain cooperative relationships with consumers and resellers from various regions in Indonesia.</li>
                     <li>Analyzed customer trends and provided insights to improve customer experience.</li>
-                    <li>Designed and implemented full-stack solutions using React, Node.js, Express, Sequelize-ORM, PostgreSQL, and GraphQL.</li>
+                    <li>Build and maintain cooperative relationships with consumers and resellers from various regions in Indonesia.</li>
+                    <li>Established a reseller system and current business processes.</li>
+                  </ul>
+                </div>
+
+                <div className="relative w-full flex flex-col gap-1">
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-semibold leading-none">
+                      Self Employed
+                    </span>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Jan 2015 - Present</time>
+                  </div>
+                  <p className="text-sm font-medium text-foreground/80">Freelance Graphic Designer & Web Programming</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Tangerang, Indonesia</p>
+                  <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
+                    <li>Designed and implemented various web applications focusing on usability and performance.</li>
+                    <li>Created graphic design assets ranging from logos to marketing materials for independent clients.</li>
                   </ul>
                 </div>
 
@@ -138,15 +153,8 @@ function App() {
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-x-4 justify-between">
                   <div className="flex flex-col gap-1 flex-1">
-                    <div className="font-semibold leading-none">Universitas Negeri Makassar</div>
-                    <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree of Computer Science, Engineering</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-x-4 justify-between">
-                  <div className="flex flex-col gap-1 flex-1">
-                    <div className="font-semibold leading-none">Hacktiv8 Indonesia</div>
-                    <div className="font-sans text-sm text-muted-foreground">Full Stack Web Development Bootcamp</div>
+                    <div className="font-semibold leading-none">Bachelor's Degree</div>
+                    <div className="font-sans text-sm text-muted-foreground">Computer Science, Engineering</div>
                   </div>
                 </div>
               </div>
