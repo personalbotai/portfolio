@@ -91,7 +91,7 @@ function App() {
               </div>
               <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground">
                 <p className="bg-primary/5 p-4 rounded-lg border border-border/50">
-                  I have completed a Bachelor of Computer Science, majoring in Engineering. I have a passion for all things technology and design, from software engineering to UI/UX. Well-organised person, problem solver, independent employee with high attention to detail.
+                  I have a passion for all things technology and design, from software engineering to UI/UX. Well-organised person, problem solver, independent employee with high attention to detail. I specialize in building modern, scalable web applications and enterprise systems.
                 </p>
               </div>
             </div>
@@ -106,6 +106,23 @@ function App() {
               
               <div className="flex flex-col gap-8 w-full border-l border-border ml-2 pl-6 relative">
                 
+                {/* BNI */}
+                <div className="relative w-full flex flex-col gap-1">
+                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-semibold leading-none">
+                      Bank Negara Indonesia (BNI)
+                    </span>
+                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Present</time>
+                  </div>
+                  <p className="text-sm font-medium text-foreground/80">Software Engineer / IT Developer</p>
+                  <p className="text-xs text-muted-foreground/60 italic">Indonesia</p>
+                  <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
+                    <li>Developing and maintaining core banking applications and financial systems.</li>
+                    <li>Implementing secure and scalable enterprise solutions.</li>
+                  </ul>
+                </div>
+
                 <div className="relative w-full flex flex-col gap-1">
                   <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
                   <div className="flex items-center justify-between gap-2">
@@ -118,24 +135,7 @@ function App() {
                   <p className="text-xs text-muted-foreground/60 italic">Tangerang, Indonesia</p>
                   <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
                     <li>Analyzed customer trends and provided insights to improve customer experience.</li>
-                    <li>Build and maintain cooperative relationships with consumers and resellers from various regions in Indonesia.</li>
                     <li>Established a reseller system and current business processes.</li>
-                  </ul>
-                </div>
-
-                <div className="relative w-full flex flex-col gap-1">
-                  <div className="absolute w-3 h-3 bg-muted border border-border rounded-full -left-[1.95rem] top-1.5 transition-colors duration-300"></div>
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-semibold leading-none">
-                      Self Employed
-                    </span>
-                    <time className="text-xs tabular-nums text-muted-foreground text-right flex-none">Jan 2015 - Present</time>
-                  </div>
-                  <p className="text-sm font-medium text-foreground/80">Freelance Graphic Designer & Web Programming</p>
-                  <p className="text-xs text-muted-foreground/60 italic">Tangerang, Indonesia</p>
-                  <ul className="text-sm text-muted-foreground leading-relaxed mt-2 list-disc ml-4 space-y-1">
-                    <li>Designed and implemented various web applications focusing on usability and performance.</li>
-                    <li>Created graphic design assets ranging from logos to marketing materials for independent clients.</li>
                   </ul>
                 </div>
 
@@ -153,8 +153,15 @@ function App() {
               <div className="flex flex-col gap-8">
                 <div className="flex items-start gap-x-4 justify-between">
                   <div className="flex flex-col gap-1 flex-1">
-                    <div className="font-semibold leading-none">Bachelor's Degree</div>
-                    <div className="font-sans text-sm text-muted-foreground">Computer Science, Engineering</div>
+                    <div className="font-semibold leading-none">Universitas Pelita Harapan (UPH)</div>
+                    <div className="font-sans text-sm text-muted-foreground">Bachelor's Degree</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-x-4 justify-between">
+                  <div className="flex flex-col gap-1 flex-1">
+                    <div className="font-semibold leading-none">Hacktiv8 Indonesia</div>
+                    <div className="font-sans text-sm text-muted-foreground">Full Stack Web Development Bootcamp</div>
                   </div>
                 </div>
               </div>
